@@ -1,22 +1,42 @@
 package me.wgoddard.listeners;
 
+import me.wgoddard.commands.*;
 import net.dv8tion.jda.api.events.GenericEvent;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 import net.dv8tion.jda.api.hooks.EventListener;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class CommandListener implements EventListener{
+
+    private final Map<String, Command> commands;
+
+    public CommandListener() {
+
+        this.commands = new HashMap<String, Command>();
+        commands.put("drop", new DropCommand());
+        commands.put("take", new TakeCommand());
+        commands.put("undress", new UndressCommand());
+        commands.put("wear", new WearCommand());
+        commands.put("undressdrop", new UndressDropCommand());
+        commands.put("takewear", new TakeWearCommand());
+
+    }
 
     @Override
     public void onEvent(@NotNull GenericEvent event) {
 
         if (event instanceof SlashCommandInteractionEvent) {
 
-            System.out.println("Command received");
-
             SlashCommandInteractionEvent commandEvent = (SlashCommandInteractionEvent) event;
-            if (commandEvent.getName().equals("oof")) {
-                commandEvent.reply("OOF!").queue();
+
+            String commandName = commandEvent.getName();
+            if (commands.containsKey(commandName)) {
+                commands.get(commandName).run(commandEvent);
+            } else {
+                commandEvent.reply("That command is not implemented yet :(");
             }
 
         }
