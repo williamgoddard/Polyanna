@@ -7,7 +7,6 @@
     <list default="true" id="25564f14-589a-4370-acbd-280c11547d06" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/wgoddard/PolyannaBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/wgoddard/PolyannaBot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/wgoddard/listeners/CommandListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/wgoddard/listeners/CommandListener.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
