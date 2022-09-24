@@ -16,6 +16,7 @@ public class CommandListener implements EventListener{
     public CommandListener() {
 
         this.commands = new HashMap<String, Command>();
+
         commands.put("drop", new DropCommand());
         commands.put("take", new TakeCommand());
         commands.put("undress", new UndressCommand());

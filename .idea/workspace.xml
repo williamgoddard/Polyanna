@@ -5,13 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25564f14-589a-4370-acbd-280c11547d06" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/wgoddard/commands/Command.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/wgoddard/commands/DropCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/wgoddard/commands/TakeCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/wgoddard/commands/TakeWearCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/wgoddard/commands/UndressCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/wgoddard/commands/UndressDropCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/wgoddard/commands/WearCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/wgoddard/PolyannaBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/wgoddard/PolyannaBot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/wgoddard/listeners/CommandListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/wgoddard/listeners/CommandListener.java" afterDir="false" />
