@@ -13,7 +13,13 @@ public class MessageListener implements EventListener{
         if (event instanceof MessageReceivedEvent) {
 
             MessageReceivedEvent messageEvent = (MessageReceivedEvent) event;
-            System.out.println(messageEvent.getMessage().getContentRaw());
+            String message = messageEvent.getMessage().getContentDisplay();
+            System.out.println(message);
+
+            if (message.equals("ping")) {
+                System.out.println("hi");
+                messageEvent.getChannel().sendMessage("Pong!").queue();
+            }
 
         }
 
