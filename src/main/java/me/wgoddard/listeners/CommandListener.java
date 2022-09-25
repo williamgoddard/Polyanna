@@ -24,6 +24,7 @@ public class CommandListener implements EventListener{
         commands.put("undressdrop", new UndressDropCommand());
         commands.put("takewear", new TakeWearCommand());
 
+        commands.put("room", new RoomCommand());
         commands.put("character", new CharacterCommand());
 
     }
