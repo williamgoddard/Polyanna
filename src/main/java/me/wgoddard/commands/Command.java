@@ -4,6 +4,6 @@ import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEve
 
 public interface Command {
 
-    public boolean run(SlashCommandInteractionEvent command);
+    public String run(SlashCommandInteractionEvent command);
 
 }

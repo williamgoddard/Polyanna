@@ -24,6 +24,8 @@ public class CommandListener implements EventListener{
         commands.put("undressdrop", new UndressDropCommand());
         commands.put("takewear", new TakeWearCommand());
 
+        commands.put("character", new CharacterCommand());
+
     }
 
     @Override
@@ -37,7 +39,7 @@ public class CommandListener implements EventListener{
             if (commands.containsKey(commandName)) {
                 commands.get(commandName).run(commandEvent);
             } else {
-                commandEvent.reply("That command is not implemented yet :(");
+                commandEvent.reply("That command is not implemented yet :(").queue();
             }
 
         }

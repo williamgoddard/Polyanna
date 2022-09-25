@@ -5,7 +5,7 @@ import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEve
 public class UndressCommand implements Command {
 
     @Override
-    public boolean run(SlashCommandInteractionEvent command) {
+    public String run(SlashCommandInteractionEvent command) {
         String itemName = command.getOption("item").getAsString();
         int itemNum;
         try {
@@ -14,7 +14,7 @@ public class UndressCommand implements Command {
             itemNum = 1;
         }
         command.reply("This command will undress item: " + itemName + " " + itemNum).queue();
-        return true;
+        return null;
     }
 
 }
