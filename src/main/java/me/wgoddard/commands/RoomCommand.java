@@ -1,12 +1,9 @@
 package me.wgoddard.commands;
 
+import me.wgoddard.utilities.HTTPThing;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 
 public class RoomCommand implements Command {
-
-    public RoomCommand() {
-
-    }
 
     @Override
     public String run(SlashCommandInteractionEvent command) {
@@ -29,11 +26,13 @@ public class RoomCommand implements Command {
     }
 
     private String create(SlashCommandInteractionEvent command) {
-        return null;
+        String name = command.getOption("name").getAsString();
+        return HTTPThing.postRequest("room/create", "{\"name\": \"" + name + "\"}");
     }
 
     private String look(SlashCommandInteractionEvent command) {
-        return null;
+        String name = command.getOption("name").getAsString();
+        return HTTPThing.getRequest("room/read/" + name);
     }
 
     private String edit(SlashCommandInteractionEvent command) {
@@ -41,7 +40,8 @@ public class RoomCommand implements Command {
     }
 
     private String delete(SlashCommandInteractionEvent command) {
-        return null;
+        String name = command.getOption("name").getAsString();
+        return HTTPThing.deleteRequest("room/delete/" + name);
     }
 
 }

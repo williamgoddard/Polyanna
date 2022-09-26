@@ -47,4 +47,39 @@ public class HTTPThing {
         }
     }
 
+    public static String putRequest(String mapping, String body) {
+        HttpRequest request = HttpRequest.newBuilder()
+                .PUT(HttpRequest.BodyPublishers.ofString(body))
+                .header("accept", "application/json")
+                .header("content-type", "application/json")
+                .uri(URI.create(POSTS_API_URL + mapping))
+                .build();
+        try {
+            return client.send(request, HttpResponse.BodyHandlers.ofString()).body();
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+            return null;
+        } catch (InterruptedException e) {
+            System.out.println(e.getMessage());
+            return null;
+        }
+    }
+
+    public static String deleteRequest(String mapping) {
+        HttpRequest request = HttpRequest.newBuilder()
+                .DELETE()
+                .header("accept", "application/json")
+                .uri(URI.create(POSTS_API_URL + mapping))
+                .build();
+        try {
+            return client.send(request, HttpResponse.BodyHandlers.ofString()).body();
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+            return null;
+        } catch (InterruptedException e) {
+            System.out.println(e.getMessage());
+            return null;
+        }
+    }
+
 }

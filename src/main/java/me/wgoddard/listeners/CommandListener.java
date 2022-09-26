@@ -38,7 +38,7 @@ public class CommandListener implements EventListener{
 
             String commandName = commandEvent.getName();
             if (commands.containsKey(commandName)) {
-                commands.get(commandName).run(commandEvent);
+                commandEvent.reply(commands.get(commandName).run(commandEvent)).queue();
             } else {
                 commandEvent.reply("That command is not implemented yet :(").queue();
             }

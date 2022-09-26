@@ -172,9 +172,6 @@ public class PolyannaBot {
 
         bot.getGuildById("933432644857909339").updateCommands().addCommands(commands).queue();
 
-        HTTPThing.postRequest("room/create", "{\"name\": \"garden\"}");
-        System.out.println(HTTPThing.getRequest("room/readAll"));
-
     }
 
 }
