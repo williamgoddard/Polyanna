@@ -1,6 +1,7 @@
 package me.wgoddard;
 
 import me.wgoddard.listeners.CommandListener;
+import me.wgoddard.listeners.GuildJoinListener;
 import me.wgoddard.listeners.MessageListener;
 import me.wgoddard.listeners.ReadyListener;
 import me.wgoddard.utilities.HTTPThing;
@@ -30,7 +31,8 @@ public class PolyannaBot {
         builder.addEventListeners(
                 new ReadyListener(),
                 new MessageListener(),
-                new CommandListener());
+                new CommandListener(),
+                new GuildJoinListener());
 
         // Set the builder's activity
         builder.setActivity(Activity.watching("you"));
