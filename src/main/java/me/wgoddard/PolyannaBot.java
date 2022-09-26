@@ -3,6 +3,7 @@ package me.wgoddard;
 import me.wgoddard.listeners.CommandListener;
 import me.wgoddard.listeners.MessageListener;
 import me.wgoddard.listeners.ReadyListener;
+import me.wgoddard.utilities.HTTPThing;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.entities.Activity;
@@ -170,6 +171,8 @@ public class PolyannaBot {
                                 .setRequiredLength(1, 30))));
 
         bot.getGuildById("933432644857909339").updateCommands().addCommands(commands).queue();
+
+        HTTPThing.getRequest("room/readAll");
 
     }
 

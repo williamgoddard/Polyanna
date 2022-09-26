@@ -5,16 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25564f14-589a-4370-acbd-280c11547d06" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/wgoddard/commands/CharacterCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/wgoddard/utilities/HTTPThing.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/wgoddard/commands/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/wgoddard/commands/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/wgoddard/commands/DropCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/wgoddard/commands/DropCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/wgoddard/commands/TakeCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/wgoddard/commands/TakeCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/wgoddard/commands/TakeWearCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/wgoddard/commands/TakeWearCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/wgoddard/commands/UndressCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/wgoddard/commands/UndressCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/wgoddard/commands/UndressDropCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/wgoddard/commands/UndressDropCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/wgoddard/commands/WearCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/wgoddard/commands/WearCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/wgoddard/listeners/CommandListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/wgoddard/listeners/CommandListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/wgoddard/PolyannaBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/wgoddard/PolyannaBot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/wgoddard/commands/RoomCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/wgoddard/commands/RoomCommand.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +24,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -47,7 +46,9 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/William/Stuff/Roleplays/Bots/PolyannaBackend",
+    "settings.editor.selected.configurable": "preferences.general"
   }
 }]]></component>
   <component name="RecentsManager">

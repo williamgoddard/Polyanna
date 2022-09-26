@@ -4,6 +4,10 @@ import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEve
 
 public class RoomCommand implements Command {
 
+    public RoomCommand() {
+
+    }
+
     @Override
     public String run(SlashCommandInteractionEvent command) {
 
