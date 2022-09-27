@@ -8,7 +8,7 @@ import java.net.http.HttpResponse;
 
 public class HTTPThing {
 
-    private static final String POSTS_API_URL = "http://localhost:8080/api/v1/";
+    private static final String POSTS_API_URL = "http://localhost:8080/api/";
 
     private static final HttpClient client = HttpClient.newHttpClient();
 

@@ -14,7 +14,7 @@ public class GuildJoinListener implements EventListener {
         if (event instanceof GuildJoinEvent) {
 
             String guildId = ((GuildJoinEvent) event).getGuild().getId();
-            HTTPThing.postRequest("server/create", "{\"discordId\": " + guildId + "}");
+            HTTPThing.postRequest("server", "{\"discordId\": " + guildId + "}");
 
         }
 
