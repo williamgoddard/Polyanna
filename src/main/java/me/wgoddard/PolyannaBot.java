@@ -82,17 +82,31 @@ public class PolyannaBot {
 
         commands.add(Commands.slash("room", "Command to perform admin actions on rooms").addSubcommands(
                 new SubcommandData("create", "Create a room").addOptions(
-                        new OptionData(OptionType.STRING, "name", "The name of the room", true)
-                                .setRequiredLength(1, 30)),
+                        new OptionData(OptionType.STRING, "room", "The name of the room", true)
+                                .setRequiredLength(1, 30)
+                ),
+                new SubcommandData("list", "List all of the rooms"),
                 new SubcommandData("look", "Look at a room").addOptions(
-                        new OptionData(OptionType.STRING, "name", "The name of the room", true)
-                                .setRequiredLength(1, 30)),
+                        new OptionData(OptionType.STRING, "room", "The name of the room", true)
+                                .setRequiredLength(1, 30),
+                        new OptionData(OptionType.INTEGER, "num", "The number of the specific room, if there are multiple rooms with the same name", false)
+                                .setRequiredRange(1, Integer.MAX_VALUE)
+                ),
                 new SubcommandData("edit", "Edit a room").addOptions(
-                        new OptionData(OptionType.STRING, "name", "The name of the room", true)
-                                .setRequiredLength(1, 30)),
+                        new OptionData(OptionType.STRING, "room", "The name of the room", true)
+                                .setRequiredLength(1, 30),
+                        new OptionData(OptionType.INTEGER, "num", "The number of the specific room, if there are multiple rooms with the same name", false)
+                                .setRequiredRange(1, Integer.MAX_VALUE),
+                        new OptionData(OptionType.STRING, "name", "The new name of the room", false)
+                                .setRequiredLength(1, 30)
+                ),
                 new SubcommandData("delete", "Delete a room").addOptions(
-                        new OptionData(OptionType.STRING, "name", "The name of the room", true)
-                                .setRequiredLength(1, 30))));
+                        new OptionData(OptionType.STRING, "room", "The name of the room", true)
+                                .setRequiredLength(1, 30),
+                        new OptionData(OptionType.INTEGER, "num", "The number of the specific room, if there are multiple rooms with the same name", false)
+                                .setRequiredRange(1, Integer.MAX_VALUE)
+                )
+        ));
 
         commands.add(Commands.slash("character", "Command to perform admin actions on characters").addSubcommands(
                 new SubcommandData("create", "Create a character").addOptions(

@@ -13,6 +13,8 @@ public class RoomCommand implements Command {
         switch (path) {
             case "room/create":
                 return create(command);
+            case "room/list":
+                return list(command);
             case "room/look":
                 return look(command);
             case "room/edit":
@@ -27,29 +29,39 @@ public class RoomCommand implements Command {
 
     private String create(SlashCommandInteractionEvent command) {
         String guildId = command.getGuild().getId();
-        String name = command.getOption("name").getAsString();
-        return HTTPThing.postRequest("room/" + guildId, "{\"name\": \"" + name + "\"}");
+        String room = command.getOption("room").getAsString();
+        return HTTPThing.postRequest("room/" + guildId, "{\"name\": \"" + room + "\"}");
+    }
+
+    private String list(SlashCommandInteractionEvent command) {
+        String guildId = command.getGuild().getId();
+        String response = HTTPThing.getRequest("room/" + guildId);
+        return (!response.equals("")) ? response : "No rooms could be found";
     }
 
     private String look(SlashCommandInteractionEvent command) {
         String guildId = command.getGuild().getId();
-        String name = command.getOption("name").getAsString();
+        String room = command.getOption("room").getAsString();
         int num = (command.getOption("num") != null) ? command.getOption("num").getAsInt() : 1;
-        return HTTPThing.getRequest("room/" + guildId + "/" + name + "/" + num);
+        String response = HTTPThing.getRequest("room/" + guildId + "/" + room + "/" + num);
+        return (!response.equals("")) ? response : "The room could not be found";
     }
 
     private String edit(SlashCommandInteractionEvent command) {
         String guildId = command.getGuild().getId();
-        String name = command.getOption("name").getAsString();
+        String room = command.getOption("room").getAsString();
         int num = (command.getOption("num") != null) ? command.getOption("num").getAsInt() : 1;
-        return HTTPThing.putRequest("room/" + guildId + "/" + name + "/" + num, "{\"name\": \"" + name + "\"}");
+        String requestBody = "{";
+        requestBody += (command.getOption("name") != null) ? "\"name\":\"" + command.getOption("name").getAsString() + "\"," : "";
+        requestBody = ((requestBody.charAt(requestBody.length()-1) == ',') ? requestBody.substring(0, requestBody.length()-1) : requestBody) + "}";
+        return HTTPThing.putRequest("room/" + guildId + "/" + room + "/" + num, requestBody);
     }
 
     private String delete(SlashCommandInteractionEvent command) {
         String guildId = command.getGuild().getId();
-        String name = command.getOption("name").getAsString();
+        String room = command.getOption("room").getAsString();
         int num = (command.getOption("num") != null) ? command.getOption("num").getAsInt() : 1;
-        return HTTPThing.deleteRequest("room/" + guildId + "/" + name + "/" + num);
+        return HTTPThing.deleteRequest("room/" + guildId + "/" + room + "/" + num);
     }
 
 }
